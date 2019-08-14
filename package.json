@@ -1,6 +1,6 @@
 {
     "name": "gscweb3",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "JavaScript SDK that encapsulates the GSC HTTP API",
     "main": "dist/GSCWeb3.node.js",
     "scripts": {
