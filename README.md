@@ -3,7 +3,7 @@
 
 # GSCWeb3.js - GSC JavaScript API
 
-This is the GSC JavaScript API
+This is the [GSC](https://gsc.social)JavaScript API
 which connects to the Generic JSON RPC spec.
 
 You need to run a local or remote GSC node to use this library.
@@ -42,6 +42,18 @@ const GSCWeb3 = new GSCWeb3({
 
 __1.0.0__
 
+## Read the [Wiki](https://wiki.gsc.social/) for detail
+
+## Links
+* [GSC Webiste](https://gscan.social/)
+* [GSCan](https://gscan.social/)
+* [Telegram](https://t.me/gscofficial)
+* [Twitter](https://twitter.com/gsc_socialchain)
+* [Facebook](https://www.facebook.com/GSCCoin/)
+* [Github](https://github.com/gscsocial)
+* [Meidum](https://medium.com/@gsc_socialchain)
+* [Reddit](https://www.reddit.com/user/GSCOfficial/)
+* [Youtube](https://www.youtube.com/channel/UCWcQhl4N6_ggZFdHwTxuuIQ)
 
 ## Licence
 
