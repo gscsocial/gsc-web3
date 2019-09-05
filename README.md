@@ -8,6 +8,8 @@ which connects to the Generic JSON RPC spec.
 
 You need to run a local or remote GSC node to use this library.
 
+[Install via NPM](https://www.npmjs.com/package/gscweb3)
+
 Please read the documentation for more.
 
 ## Installation
