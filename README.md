@@ -46,7 +46,7 @@ __1.0.0__
 
 ## Links
 * [GSC Webiste](https://gscan.social/)
-* [GSCan](https://gscan.social/)
+* [GSC Exploer](https://gscan.social/)
 * [Telegram](https://t.me/gscofficial)
 * [Twitter](https://twitter.com/gsc_socialchain)
 * [Facebook](https://www.facebook.com/GSCCoin/)
