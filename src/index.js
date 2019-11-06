@@ -2,7 +2,7 @@ import providers from 'library/request';
 import tools from 'tools';
 import BigNumber from 'bignumber.js';
 import EventEmitter from 'eventemitter3';
-import {version} from '../package.json';
+import { version } from '../package.json';
 import semver from 'semver';
 
 import TransactionBuilder from 'library/trxBuilder';
@@ -10,13 +10,13 @@ import Gsc from 'library/gsc';
 import Contract from 'library/smartContract';
 import Plugin from 'library/plugin';
 import Event from 'library/event';
-import {keccak256} from 'tools/ethersUtils';
-import {ADDRESS_PREFIX} from 'tools/address';
+import { keccak256 } from 'tools/ethersUtils';
+import { ADDRESS_PREFIX } from 'tools/address';
 
 const DEFAULT_VERSION = '3.5.0';
 
 export default class GSCWeb3 extends EventEmitter {
-    static getRestful = providers;
+    static providers = providers;
     static BigNumber = BigNumber;
     static TransactionBuilder = TransactionBuilder;
     static Gsc = Gsc;
@@ -27,7 +27,7 @@ export default class GSCWeb3 extends EventEmitter {
     static tools = tools;
 
     constructor(options = false,
-                confirmedNode = false, eventServer = false, privateKey = false) {
+        confirmedNode = false, eventServer = false, privateKey = false) {
         super();
 
         let fullNode;
@@ -136,7 +136,7 @@ export default class GSCWeb3 extends EventEmitter {
             base58
         };
 
-        this.emit('addressChanged', {hex, base58});
+        this.emit('addressChanged', { hex, base58 });
     }
 
     fullnodeSatisfies(version) {

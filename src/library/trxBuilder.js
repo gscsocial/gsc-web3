@@ -1,8 +1,8 @@
 import GSCWeb3 from 'index';
 import tools from 'tools';
-import {AbiCoder} from 'tools/ethersUtils';
+import { AbiCoder } from 'tools/ethersUtils';
 import Validator from 'tools/paramValidator';
-import {ADDRESS_PREFIX_REGEX} from 'tools/address';
+import { ADDRESS_PREFIX_REGEX } from 'tools/address';
 
 let self;
 
@@ -11,7 +11,7 @@ function fromUtf8(value) {
 }
 
 function toHex(value) {
-    return self.gscWeb3.address.toHex(value);
+    return GSCWeb3.address.toHex(value);
 }
 
 function resultManager(transaction, callback) {
@@ -138,7 +138,7 @@ export default class TransactionBuilder {
             const values = [];
 
             for (let i = 0; i < parameters.length; i++) {
-                let {type, value} = parameters[i];
+                let { type, value } = parameters[i];
 
                 if (!type || !tools.isString(type) || !type.length)
                     return callback('Error: code id: 20001' + type);
@@ -272,7 +272,7 @@ export default class TransactionBuilder {
         if (!callback)
             return this.injectPromise(this.addUpdateData, transaction, data, dataFormat);
 
-        this.alterTransaction(transaction, {data, dataFormat}, callback);
+        this.alterTransaction(transaction, { data, dataFormat }, callback);
     }
 
     checkPermissions(permissions, type) {
@@ -304,7 +304,7 @@ export default class TransactionBuilder {
         if (!callback)
             return this.injectPromise(this.extendExpiration, transaction, extension);
 
-        this.alterTransaction(transaction, {extension}, callback);
+        this.alterTransaction(transaction, { extension }, callback);
     }
 
     async newTxID(transaction, callback) {
@@ -1676,12 +1676,12 @@ export default class TransactionBuilder {
     }
 
     tradeExchangeTokens(exchangeID = false,
-                        tokenName = false,
-                        tokenAmountSold = 0,
-                        tokenAmountExpected = 0,
-                        ownerAddress = this.gscWeb3.defaultAddress.hex,
-                        options,
-                        callback = false) {
+        tokenName = false,
+        tokenAmountSold = 0,
+        tokenAmountExpected = 0,
+        ownerAddress = this.gscWeb3.defaultAddress.hex,
+        options,
+        callback = false) {
         if (tools.isFunction(options)) {
             callback = options;
             options = {};
@@ -1746,10 +1746,10 @@ export default class TransactionBuilder {
     }
 
     updateSetting(contractAddress = false,
-                  userFeePercentage = false,
-                  ownerAddress = this.gscWeb3.defaultAddress.hex,
-                  options,
-                  callback = false) {
+        userFeePercentage = false,
+        ownerAddress = this.gscWeb3.defaultAddress.hex,
+        options,
+        callback = false) {
         if (tools.isFunction(options)) {
             callback = options;
             options = {};
@@ -1801,10 +1801,10 @@ export default class TransactionBuilder {
     }
 
     updateCpuLimit(contractAddress = false,
-                      originCpuLimit = false,
-                      ownerAddress = this.gscWeb3.defaultAddress.hex,
-                      options,
-                      callback = false) {
+        originCpuLimit = false,
+        ownerAddress = this.gscWeb3.defaultAddress.hex,
+        options,
+        callback = false) {
 
         if (tools.isFunction(options)) {
             callback = options;
@@ -1857,10 +1857,10 @@ export default class TransactionBuilder {
     }
 
     updateAccountPermissions(ownerAddress = this.gscWeb3.defaultAddress.hex,
-                             ownerPermissions = false,
-                             witnessPermissions = false,
-                             activesPermissions = false,
-                             callback = false) {
+        ownerPermissions = false,
+        witnessPermissions = false,
+        activesPermissions = false,
+        callback = false) {
 
         if (tools.isFunction(activesPermissions)) {
             callback = activesPermissions;
